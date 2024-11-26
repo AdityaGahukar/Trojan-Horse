@@ -11,8 +11,8 @@ In the real world, a Trojan would likely be implemented in a lower-level languag
 ## How to Reproduce:
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/AdityaGahukar/Trojan-Horse.git
+   cd Trojan-Horse
    ```
 
 2. Adjust ip address both in server.py and spyware.py to your own by running ipconfig (Windows) or ifconfig (Linux/macOS).
