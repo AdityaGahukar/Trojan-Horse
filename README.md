@@ -1,19 +1,35 @@
 # TROJAN HORSE
 
-## Idea:
-It is a disguised software into a software such as a game. Differently from a virus, the trojan horse is not meant to cause any damage. Indeed, it fetch some kind of data from the infected computer and sends it to the hacker.
+## Description:
+A Trojan Horse is a type of malware disguised as legitimate software, such as a game. Unlike a virus, it doesn’t necessarily cause harm but can fetch data from the infected machine and send it to an attacker.
 
-## Note:
-A real world trojan horse would be implemented with a lower lever, more disguisable, thus compiled language such as C++.
-However, for the purpose of learning and understanding the internal mechanism, I used python.
+In this case, the Trojan simulates a simple "Guess the Number" game. Behind the scenes, it connects to a remote server and allows the server to issue commands to the client (the infected machine).
+
+## Note:  
+In the real world, a Trojan would likely be implemented in a lower-level language like C++ to avoid detection. For educational purposes, this project uses Python to help understand the mechanics of a Trojan.
 
 ## How to Reproduce:
-1. clone repo
-2. adjust ip address both in server.py and spyware.py to your own
-3. from terminal #1 execute server.py
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+
+2. Adjust ip address both in server.py and spyware.py to your own by running ipconfig (Windows) or ifconfig (Linux/macOS).
+3. From terminal #1 execute server.py:
+   ```bash
+   python server.py
+   ```
+
 4. from terminal #2 execute main.py
-    * the "Guess a Number" game will be prompted. Behind the curtains a connection is established between server and spyware (it runs on a different thread respect to the game)
-5. from server's terminal try these commands:
-    * infect - will print in the client terminal a quircky message
-    * chat on - will enable the possibility to send any custom text message in the client terminal
+   ```bash
+   python main.py
+   ```
+    * The "Guess a Number" game will be prompted. Behind the curtains a connection is established between server and spyware (it runs on a different thread respect to the game)
+5. From server's terminal try these commands:
+    * infect: The Trojan will print a message as a joke or distraction.
+    * chat on: Activates chat mode where you can send messages to the victim
     * chat off - return to default mode
+    * get_sysinfo: Retrieves system information like OS, version, and machine specs.
+    * exec:<command>: Executes shell commands on the victim's machine.
+    * create_file:<filename>:<content>: Creates a file with the given content.
